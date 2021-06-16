@@ -128,12 +128,14 @@ ptrn->next=ptrs->top;
 ptrs->top=ptrn;
 ptrs->size++;
 /*Saving the contact information to the file(without the pointer next of course)*/
-/*strcpy(c1.first_name,fn);
+/*fp=fopen("8.dat","ab");
+strcpy(c1.first_name,fn);
 strcpy(c1.last_name,ln);
 strcpy(c1.phone_number,pn);
 strcpy(c1.address,add);
 strcpy(c1.mail,ml);
-fwrite(&c1,sizeof(c1),1,fp);*/
+fwrite(&c1,sizeof(c1),1,fp);
+fclose(fp);*/
 }
 void pop(stack *ptrs){
 if(!ptrs->top){
@@ -153,7 +155,6 @@ void TraverseStack(stack *ptrs,void(*ptrf)(contact)){
 contact *ptrn=ptrs->top;
 while(ptrn){
     (*ptrf)(*ptrn);
-    DisplayContact(top)
     ptrn=ptrn->next;
 }
 }
