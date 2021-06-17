@@ -13,9 +13,6 @@ strcpy(ptrn->mail,ml);
 ptrn->next=ptrs->top;
 ptrs->top=ptrn;
 ptrs->size++;
-fp = fopen("contacts.txt","a");
-fprintf(fp,"\n%s\n %s\n %s\n %s\n %s\n", fn, ln, pn, add, ml);
-fclose(fp);
 }
 void addContact(){
  char fn[10];
